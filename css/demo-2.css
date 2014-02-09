@@ -1,0 +1,30 @@
+	#ad{
+		margin-top:30px;
+
+	}
+	img{
+		border:0px;
+	}
+	h1{
+		font-size:1.3em;
+	}
+	strong{
+		color:red;
+	}
+	body{
+		font-size:0.8em;
+		font-family: Trebuchet MS, Lucida Sans Unicode, Arial, sans-serif;
+		margin:0px;
+		padding:0px;
+	}
+	table,#ad,p,h1{
+		margin-left:10px;
+	}
+	table thead td{
+		font-weight:bold;
+		cursor:pointer;
+	}
+	/* If you wish to highlight current sortable column, add layout effects below */
+	.highlightedColumn{
+		background-color:#EEE;
+	}
