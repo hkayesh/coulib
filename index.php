@@ -94,6 +94,9 @@
         $sql = "select * from area where area_id = (select max(area_id) from area)";
         $row = mysql_fetch_array(mysql_query($sql));
         $latest_area = $row['area_name'];
+        $sql = "SELECT sum(number_of_copy) as total_copy FROM book";
+        $row = mysql_fetch_array(mysql_query($sql));
+        $total_copy = $row['total_copy'];
         
    ?>
         
@@ -106,7 +109,13 @@
                             </div>
                         </div>                        
                     </td>
-                    <td>Total Area<div id="box_style"> 
+                    <td>Total Copies<div id="box_style">
+                            <div id="box_inside_info" style="padding-top: 30px;">
+                                <?php echo $total_copy;?>
+                            </div>
+                        </div>
+                    </td>
+                    <td>Total Area<div id="box_style">
                             <div id="box_inside_info" style="padding-top: 30px;">
                                 <?php echo $total_area;?>
                             </div>
@@ -115,12 +124,6 @@
                     <td>Latest Book <div id="box_style">
                             <div id="box_inside_info">
                                 <?php echo $latest_book;?>                                
-                            </div>
-                        </div>                        
-                    </td>
-                    <td>Latest Area<div id="box_style">
-                            <div id="box_inside_info">
-                                <?php echo $latest_area;?>                                
                             </div>
                         </div>                        
                     </td>

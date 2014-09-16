@@ -181,7 +181,7 @@ if (isset($_POST['submit'])) {
                                 <td>
                                     <select name="status">
                                         <option value="Available" selected="selected">Available</option>
-                                        <option value="NotAvailable">Not Available</option>
+                                        <option value="Not Available">Not Available</option>
                                     </select>
                                 </td>
                             </tr>
